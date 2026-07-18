@@ -3,71 +3,232 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>No Sweat Electrical — Coming Soon · New Bern &amp; Eastern NC</title>
-<meta name="description" content="No Sweat Electrical — honest, licensed electrical service coming soon to New Bern and the Crystal Coast, North Carolina. A Hahn Family of Companies venture." />
-<meta name="robots" content="index, follow" />
+<!-- ========================================================================
+     NO SWEAT ELECTRICAL — FULL SITE (STAGED / NOT LIVE)
+     Do NOT deploy to the live domain until Mike holds an active NC electrical
+     contractor license (NCBEEC) and his Cape Lookout contract is cleared.
+     Fill the two placeholders before launch:
+       __PHONE__   → dedicated No Sweat tracking number (rings David/Mike)
+       __LICENSE__ → NC electrical contractor license number
+======================================================================== -->
+<title>No Sweat Electrical — Honest Electrician in New Bern, NC | Panel Upgrades, EV Chargers, Generators</title>
+<meta name="description" content="No Sweat Electrical — honest, licensed electricians serving New Bern & the Crystal Coast, NC. Panel upgrades, EV charger installs, generator hookups, ceiling fans, outlets, troubleshooting. Fast response, fair flat-rate pricing." />
+<meta name="keywords" content="electrician New Bern NC, licensed electrician New Bern, panel upgrade New Bern, EV charger installation New Bern, generator installation Craven County, emergency electrician New Bern, ceiling fan installation, electrical troubleshooting Havelock" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
 <link rel="canonical" href="https://nosweatelectrical.com/" />
 <meta name="theme-color" content="#0d1117" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="No Sweat Electrical — Coming Soon" />
-<meta property="og:description" content="Honest, licensed electrical service coming soon to New Bern & the Crystal Coast, NC." />
+<meta property="og:title" content="No Sweat Electrical — Honest Electrician in New Bern, NC" />
+<meta property="og:description" content="Licensed, honest electrical work in New Bern & the Crystal Coast. Panel upgrades, EV chargers, generators, and everyday repairs — done right, priced fair." />
 <meta property="og:url" content="https://nosweatelectrical.com/" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%A1%3C/text%3E%3C/svg%3E" />
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Electrician",
+  "name":"No Sweat Electrical","url":"https://nosweatelectrical.com/",
+  "telephone":"__PHONE__","areaServed":["New Bern NC","Havelock NC","Bridgeton NC","River Bend NC","Trent Woods NC","Vanceboro NC","Pollocksville NC","James City NC","Craven County NC"],
+  "address":{"@type":"PostalAddress","addressLocality":"New Bern","addressRegion":"NC","addressCountry":"US"},
+  "priceRange":"$$","description":"Honest, licensed electrical service for New Bern and the Crystal Coast — panel upgrades, EV chargers, generators, and everyday repairs."
+}
+</script>
 <style>
   :root{
-    --bg:#0d1117; --bg2:#131a24; --ink:#f4f6fb; --muted:#9aa7b8;
-    --volt:#ffd23f; --volt-d:#f5b301; --line:#232c3a; --steel:#5fa0e0;
+    --bg:#0d1117;--bg2:#131a24;--surface:#161f2b;--line:#243040;--ink:#f4f6fb;--muted:#9aa7b8;
+    --volt:#ffd23f;--volt-d:#f5b301;--steel:#5fa0e0;--good:#43c478;
   }
   *{box-sizing:border-box}
-  body{margin:0;min-height:100vh;background:
-      radial-gradient(1100px 520px at 50% -10%, #1b2432 0%, var(--bg) 60%);
-    color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    line-height:1.6;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:760px;margin:0 auto;padding:0 24px;width:100%}
-  main{flex:1;display:flex;align-items:center;padding:64px 0}
-  .card{text-align:center}
-  .bolt{font-size:56px;line-height:1;filter:drop-shadow(0 6px 18px rgba(255,210,63,.35))}
-  .eyebrow{margin:18px 0 0;text-transform:uppercase;letter-spacing:.28em;font-size:12px;font-weight:800;color:var(--volt)}
-  h1{margin:12px 0 0;font-size:clamp(2.5rem,9vw,4.6rem);font-weight:900;letter-spacing:-.02em;line-height:1.02}
-  h1 .no{color:var(--ink)} h1 .sweat{color:var(--volt)} h1 .elec{display:block;color:var(--ink)}
-  .rule{width:70px;height:4px;background:var(--volt);border-radius:3px;margin:26px auto 0}
-  .lead{margin:26px auto 0;max-width:52ch;font-size:clamp(1.05rem,2.6vw,1.25rem);color:#d7deea}
-  .lead b{color:#fff}
-  .badges{margin:30px auto 0;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-  .badge{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-size:14px;font-weight:700;color:#cdd8e8}
-  .badge.live{border-color:var(--volt);color:var(--volt)}
-  .soon{margin:34px auto 0;display:inline-flex;align-items:center;gap:10px;background:linear-gradient(180deg,var(--volt),var(--volt-d));
-    color:#231a02;font-weight:900;letter-spacing:.04em;padding:14px 28px;border-radius:12px;font-size:1.05rem;
-    box-shadow:0 10px 30px -10px rgba(255,210,63,.5)}
-  .note{margin:22px auto 0;max-width:48ch;font-size:.9rem;color:var(--muted)}
-  footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:14px}
-  footer a{color:var(--steel);text-decoration:none;font-weight:600}
-  footer .fam{color:#cdd8e8}
-  footer .sdg{color:var(--volt);font-weight:700;margin-top:6px}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);line-height:1.62;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  img{max-width:100%}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{line-height:1.12;letter-spacing:-.01em;text-wrap:balance}
+  a{color:var(--steel);text-decoration:none}
+  .volt{color:var(--volt)}
+
+  /* header */
+  header.site{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.15rem}
+  .brand .b{color:var(--volt)}
+  .call{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,var(--volt),var(--volt-d));
+    color:#231a02;font-weight:900;padding:11px 18px;border-radius:10px;font-size:.98rem;white-space:nowrap;box-shadow:0 8px 22px -10px rgba(255,210,63,.5)}
+
+  /* hero */
+  .hero{background:radial-gradient(900px 460px at 78% -12%,#1c2634 0%,var(--bg) 62%);padding:66px 0 54px;border-bottom:1px solid var(--line)}
+  .hero .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12.5px;font-weight:800;color:var(--volt)}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.7rem);font-weight:900;margin:12px 0 0}
+  .hero p.lead{font-size:clamp(1.05rem,2.4vw,1.28rem);color:#d7deea;max-width:56ch;margin:18px 0 0}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;padding:14px 24px;border-radius:11px;font-size:1.02rem}
+  .btn.primary{background:linear-gradient(180deg,var(--volt),var(--volt-d));color:#231a02;box-shadow:0 10px 28px -10px rgba(255,210,63,.5)}
+  .btn.ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+  .trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:26px;color:var(--muted);font-size:.92rem;font-weight:600}
+  .trust b{color:var(--ink)}
+
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  .head{text-align:center;max-width:60ch;margin:0 auto 34px}
+  .head .k{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:800;color:var(--volt)}
+  .head h2{font-size:clamp(1.7rem,4vw,2.3rem);margin:8px 0 0}
+  .head p{color:var(--muted);margin:10px 0 0}
+
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .ic{font-size:26px}
+  .card h3{margin:10px 0 6px;font-size:1.14rem}
+  .card p{margin:0;color:var(--muted);font-size:.96rem}
+
+  .why{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .why .item{display:flex;gap:13px;align-items:flex-start}
+  .why .ck{flex:none;color:var(--good);font-weight:900;font-size:1.1rem;margin-top:1px}
+  .why h3{margin:0 0 3px;font-size:1.05rem}
+  .why p{margin:0;color:var(--muted);font-size:.94rem}
+
+  .area{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:8px}
+  .chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:700;font-size:.92rem;color:#cdd8e8}
+
+  form{max-width:620px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
+  label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 6px}
+  input,textarea,select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:11px 13px;font-size:1rem;font-family:inherit}
+  input:focus,textarea:focus,select:focus{outline:2px solid var(--volt);border-color:var(--volt)}
+  form .btn.primary{width:100%;justify-content:center;margin-top:18px;border:none;cursor:pointer}
+  .fine{color:var(--muted);font-size:.82rem;text-align:center;margin-top:14px}
+
+  footer.site{padding:34px 0;text-align:center;color:var(--muted);font-size:14px}
+  footer .lic{color:#cdd8e8}
+  footer a{font-weight:600}
+  footer .sdg{color:var(--volt);font-weight:700;margin-top:8px}
+
+  .stickycall{display:none}
+  @media(max-width:640px){
+    .bar .call{display:none}
+    .stickycall{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;
+      background:linear-gradient(180deg,var(--volt),var(--volt-d));color:#231a02;font-weight:900;
+      align-items:center;justify-content:center;gap:9px;padding:15px;font-size:1.05rem;box-shadow:0 -6px 20px rgba(0,0,0,.4)}
+    body{padding-bottom:56px}
+  }
 </style>
 </head>
 <body>
-  <main>
-    <div class="wrap card">
-      <div class="bolt">⚡</div>
-      <p class="eyebrow">New Bern &amp; the Crystal Coast, NC</p>
-      <h1><span class="no">No</span> <span class="sweat">Sweat</span><span class="elec">Electrical</span></h1>
-      <div class="rule"></div>
-      <p class="lead">Honest, dependable electrical work is on the way &mdash; done right, priced fair, and treated like it&rsquo;s our own home. <b>Something great is coming to Eastern NC.</b></p>
-      <div class="badges">
-        <span class="badge live">⚡ Launching soon</span>
-        <span class="badge">🤝 Honest &amp; local</span>
-        <span class="badge">🛡️ Fully licensed at launch</span>
-      </div>
-      <div class="soon">🚧 Powering up — launching soon</div>
-      <p class="note">We&rsquo;re getting everything in order the right way, so we can serve you the right way. Check back soon.</p>
+  <header class="site">
+    <div class="wrap bar">
+      <div class="brand">⚡ No <span class="b">Sweat</span> Electrical</div>
+      <a class="call" href="tel:__PHONE__">📞 Call __PHONE__</a>
     </div>
-  </main>
-  <footer>
+  </header>
+
+  <section class="hero" style="border-bottom:none">
     <div class="wrap">
-      <div class="fam">A venture of the <a href="https://hahntechcorp.com">Hahn Family of Companies</a> &middot; New Bern, NC</div>
+      <p class="eyebrow">New Bern &amp; the Crystal Coast, NC</p>
+      <h1>Honest electrical work,<br><span class="volt">done right</span> — no sweat.</h1>
+      <p class="lead">From panel upgrades and EV chargers to a flickering light you just want fixed — we show up fast, charge fair, and treat your home like our own. Licensed, insured, and local.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="tel:__PHONE__">📞 Call for a fast quote</a>
+        <a class="btn ghost" href="#quote">Request a quote →</a>
+      </div>
+      <div class="trust">
+        <span>⚡ <b>Fast response</b></span>
+        <span>🛡️ <b>Licensed &amp; insured</b> (NC #__LICENSE__)</span>
+        <span>💵 <b>Fair flat-rate</b> pricing</span>
+        <span>🤝 <b>Local</b> &amp; honest</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head"><span class="k">What we do</span><h2>Electrical service for home &amp; business</h2>
+        <p>Big jobs, small jobs, and the "can you just take a look?" jobs — all done to code and done right.</p></div>
+      <div class="grid">
+        <div class="card"><div class="ic">🔌</div><h3>Panel Upgrades</h3><p>100→200 amp upgrades, new panels, and safe fixes for an overloaded or outdated box.</p></div>
+        <div class="card"><div class="ic">🚗</div><h3>EV Charger Installs</h3><p>Level 2 home charging for your Tesla or any EV — sized right and installed clean.</p></div>
+        <div class="card"><div class="ic">🌀</div><h3>Generator Hookups</h3><p>Standby &amp; portable generator wiring so you keep the lights on when the storm hits.</p></div>
+        <div class="card"><div class="ic">💡</div><h3>Lighting &amp; Fans</h3><p>Ceiling fans, recessed lighting, fixtures, and switches — installed and balanced.</p></div>
+        <div class="card"><div class="ic">🔧</div><h3>Outlets &amp; Repairs</h3><p>New outlets, GFCI, dead circuits, and the little stuff that never seems to work right.</p></div>
+        <div class="card"><div class="ic">🔎</div><h3>Troubleshooting</h3><p>Flickering, tripping breakers, that mystery outlet — we find it and fix it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="head"><span class="k">Why No Sweat</span><h2>The electrician you'd send your own mom</h2></div>
+      <div class="why">
+        <div class="item"><span class="ck">✓</span><div><h3>Show up when we say</h3><p>On time, real communication, no ghosting.</p></div></div>
+        <div class="item"><span class="ck">✓</span><div><h3>Fair, upfront pricing</h3><p>You know the price before we start — no surprises.</p></div></div>
+        <div class="item"><span class="ck">✓</span><div><h3>Licensed &amp; insured</h3><p>NC-licensed electrical work, fully insured, done to code.</p></div></div>
+        <div class="item"><span class="ck">✓</span><div><h3>Treat your home like ours</h3><p>Clean work, respect for your space, honest answers.</p></div></div>
+        <div class="item"><span class="ck">✓</span><div><h3>Local &amp; here to stay</h3><p>New Bern folks serving New Bern folks. We stand behind our work.</p></div></div>
+        <div class="item"><span class="ck">✓</span><div><h3>Fast when it matters</h3><p>Electrical problems don't wait — and neither do we.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="area">
+    <div class="wrap">
+      <div class="head"><span class="k">Where we work</span><h2>Serving New Bern &amp; the Crystal Coast</h2>
+        <p>Proudly serving Craven County and the surrounding coast.</p></div>
+      <div class="area">
+        <span class="chip">New Bern</span><span class="chip">Havelock</span><span class="chip">Bridgeton</span>
+        <span class="chip">River Bend</span><span class="chip">Trent Woods</span><span class="chip">James City</span>
+        <span class="chip">Vanceboro</span><span class="chip">Pollocksville</span><span class="chip">Craven County</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="safety">
+    <div class="wrap">
+      <div class="head"><span class="k">Stay safe</span><h2>Warning signs it's time to call an electrician</h2>
+        <p>Most electrical fires start small and silent. If you notice any of these, don't wait — get it looked at.</p></div>
+      <div class="grid">
+        <div class="card"><div class="ic">🔥</div><h3>Warm or discolored outlets</h3><p>An outlet or switch that's hot to the touch, buzzing, or browned around the edges is a fire waiting to happen. Stop using it and call.</p></div>
+        <div class="card"><div class="ic">💡</div><h3>Flickering or dimming lights</h3><p>Lights that flicker when the AC or microwave kicks on can mean an overloaded circuit or a loose, arcing connection.</p></div>
+        <div class="card"><div class="ic">👃</div><h3>A burning or fishy smell</h3><p>That faint "hot plastic" or fishy odor near outlets or the panel is overheating wiring. Kill the breaker and call right away.</p></div>
+        <div class="card"><div class="ic">⚡</div><h3>Breakers that keep tripping</h3><p>A breaker's job is to trip — but if it's constant, the circuit is overloaded or there's a fault. It's protecting you; listen to it.</p></div>
+        <div class="card"><div class="ic">🧯</div><h3>An old fuse box or aluminum wiring</h3><p>Fuse panels, aluminum branch wiring, and ungrounded two-prong outlets are known fire risks in older homes. Worth an inspection.</p></div>
+        <div class="card"><div class="ic">🚿</div><h3>No GFCI near water</h3><p>Kitchens, baths, garages, and outdoor outlets need GFCI protection. If yours don't have it, that's a shock and code issue.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="local-info">
+    <div class="wrap">
+      <div class="head"><span class="k">New Bern know-how</span><h2>Local rules &amp; coastal-smart wiring</h2>
+        <p>A few honest things every New Bern &amp; Craven County homeowner should know.</p></div>
+      <div class="why">
+        <div class="item"><span class="ck">✓</span><div><h3>Permits protect you</h3><p>Most electrical work in New Bern &amp; Craven County needs a permit and inspection. It's not red tape — it's what keeps your insurance valid and your home safe. A licensed electrician handles it for you.</p></div></div>
+        <div class="item"><span class="ck">✓</span><div><h3>Licensed work matters</h3><p>In NC, electrical contracting requires a state license. Unlicensed work can void your insurance and your home sale. Always confirm your electrician is NC-licensed and insured (ours is).</p></div></div>
+        <div class="item"><span class="ck">✓</span><div><h3>Storm &amp; generator safety</h3><p>Living on the coast means outages. A standby generator needs a proper transfer switch — <b>never</b> backfeed a generator into a wall outlet; it can kill a lineworker and burn your house. We wire it the safe way.</p></div></div>
+        <div class="item"><span class="ck">✓</span><div><h3>Surge &amp; flood smarts</h3><p>Whole-home surge protection guards your electronics from storm spikes, and in flood-prone spots we can raise outlets and panels above the line. Coastal homes need coastal wiring.</p></div></div>
+      </div>
+      <p style="text-align:center;color:var(--muted);font-size:.9rem;margin-top:22px;max-width:60ch;margin-left:auto;margin-right:auto">Helpful info, honestly given — not a substitute for an in-person inspection. When in doubt, it's always cheaper (and safer) to ask than to guess.</p>
+    </div>
+  </section>
+
+  <section id="quote" style="border-bottom:none">
+    <div class="wrap">
+      <div class="head"><span class="k">Get a quote</span><h2>Tell us what you need</h2>
+        <p>Send it over and we'll get right back to you — or just call. No pressure, no sweat.</p></div>
+      <form action="https://formspree.io/f/xbdvqvrk" method="POST">
+        <input type="hidden" name="_subject" value="New No Sweat Electrical lead" />
+        <label for="n">Your name</label><input id="n" name="name" required />
+        <label for="p">Phone</label><input id="p" name="phone" type="tel" required />
+        <label for="j">What do you need done?</label>
+        <textarea id="j" name="job" rows="4" placeholder="e.g. panel upgrade, EV charger, ceiling fan, breaker keeps tripping…"></textarea>
+        <label for="c">Town</label><input id="c" name="town" placeholder="New Bern, Havelock…" />
+        <button class="btn primary" type="submit">Request my quote →</button>
+        <p class="fine">Prefer to talk? Call <a href="tel:__PHONE__" style="color:var(--volt)">__PHONE__</a>. We answer.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="lic"><strong>No Sweat Electrical</strong> · New Bern, NC · NC License #__LICENSE__ · Licensed &amp; Insured</div>
+      <div style="margin-top:6px">A venture of the <a href="https://hahntechcorp.com">Hahn Family of Companies</a></div>
       <div class="sdg">Soli Deo Gloria</div>
     </div>
   </footer>
+  <a class="stickycall" href="tel:__PHONE__">📞 Call No Sweat Electrical</a>
 </body>
 </html>

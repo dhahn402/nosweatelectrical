@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nosweatelectrical.com/sitemap.xml
